@@ -137,6 +137,7 @@ func (v *View) Render(w http.ResponseWriter, r *http.Request, data *Data, status
 		log.ErrorWrap(err, fmt.Sprintf("executing template for URI '%s'", r.RequestURI))
 		w.WriteHeader(http.StatusInternalServerError)
 		w.Write(v.App.HTTP500Page)
+		w.Write("<!-- done! -->")
 		return
 	}
 
