@@ -1,0 +1,29 @@
+version: 2
+updates:
+- package-ecosystem: "github-actions"
+  directories:
+  - /
+  schedule:
+    interval: "weekly"  # .schedule_interval
+  open-pull-requests-limit: 10
+
+- package-ecosystem: "gomod"
+  directories:
+  - /
+  schedule:
+    interval: "weekly"  # .schedule_interval
+  open-pull-requests-limit: 10
+
+- package-ecosystem: "docker"
+  directories:
+  - /host/docker/
+  schedule:
+    interval: "weekly"  # .schedule_interval
+  open-pull-requests-limit: 10
+
+- package-ecosystem: "npm"
+  directories:
+  - /pkg/server/assets/
+  schedule:
+    interval: "weekly"  # .schedule_interval
+  open-pull-requests-limit: 10
